@@ -29,7 +29,10 @@ public class Bai3 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        if (!scanner.hasNextInt()) return;
+        if (!scanner.hasNextInt()) {
+            scanner.close();
+            return;
+        }
         int n = scanner.nextInt();
         List<Point> points = new ArrayList<>();
         for (int i = 0; i < n; i++) {
@@ -40,6 +43,7 @@ public class Bai3 {
             for (Point p : points) {
                 System.out.println(p);
             }
+            scanner.close();
             return;
         }
 

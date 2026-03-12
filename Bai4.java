@@ -5,7 +5,9 @@ public class Bai4 {
         Scanner scanner = new Scanner(System.in);
         if (scanner.hasNextLine()) {
             String line = scanner.nextLine().trim();
-            if (line.isEmpty()) return;
+            scanner.close();
+            if (line.isEmpty())
+                return;
             String[] parts = line.split("[,\\s]+");
             int[] nums = new int[parts.length];
             for (int i = 0; i < parts.length; i++) {
